@@ -5,11 +5,24 @@ Simple Flappy Bird style clone to practice Vanilla JavaScript
 
 # Game Logic
 
-[ ] - Diferent sized pipes loading in and out
+[Done] - Diferent sized pipes loading in and out
 
-[ ] - Bird jumps up at the same height everytime
+[Done] - Bird jumps up at the same height everytime
 
-[ ] - Bird will fall to the ground if left alone and Game Over
+[Done] - Bird will fall to the ground if left alone and Game Over
 
-[ ] - If Bird touches any of the pipes its Game Over
+[Done] - If Bird touches any of the pipes its Game Over
 
+
+# Extra Features
+
+[ ] - Add a start button
+
+[ ] - Add more styling to the front page
+
+[ ] - Add a score that displays at the side consantly and then a big score at game over
+
+
+# Bugs 
+
+[ ] - Pipes are multiplying on top of each other
