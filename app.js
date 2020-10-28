@@ -37,10 +37,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Everytime the Up arrow key is pressed, the jump function is executed
     document.addEventListener('keyup', control);
 
-    const generateObstacles = () => {
+    const generateObstacle = () => {
+        let obstacleLeft = 500;
+        // randomHeight gives the obstacles a random height each time one is generated
+        let randomHeight = Math.random() * 60;
+        let obstacleBottom = randomHeight;
         const obstacle = document.createElement('div');
+        obstacle.classList.add('obstacle');
+        gameDisplay.appendChild(obstacle);
+        obstacle.style.left = obstacleLeft + 'px';
+        obstacle.style.bottom = obstacleBottom + 'px';
+
+        const moveObstacle = () => {
+            // Moves obstacle to the left every 20 miliseconds
+            obstacleLeft -= 2;
+            obstacle.style.left = obstacleLeft + 'px';
+
+            // Makes obstacle disappear when it gets all the way to the left
+            if(obstacleLeft === -60) {
+                clearInterval(timerId);
+                gameDisplay.removeChild(obstacle);
+            }
+        };
+        let timerId = setInterval(moveObstacle, 20);
     };
 
+    generateObstacle();
 
 
 });
