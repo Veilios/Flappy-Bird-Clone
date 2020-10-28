@@ -19,4 +19,28 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     let timerId = setInterval(startGame, 20);
+
+    const control = (e) => {
+        if (e.keyCode === 32) {
+            jump();
+        };
+    };
+
+    const jump = () => {
+        // Everytime this function is invoked, the bird will rise 50 pixels
+        if (birdBottom < 500){
+            birdBottom += 50;
+            bird.style.bottom = birdBottom + "px";
+            console.log(birdBottom);
+        };
+    };
+    // Everytime the Up arrow key is pressed, the jump function is executed
+    document.addEventListener('keyup', control);
+
+    const generateObstacles = () => {
+        const obstacle = document.createElement('div');
+    };
+
+
+
 });
